@@ -1,0 +1,281 @@
+/******************
+* Common settings *
+******************/
+body {
+	margin: 0;
+	background: url(plain.jpg) no-repeat;
+	background-size: 100%;
+	
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid black;
+}
+
+input {
+	font-size: 17px;
+}
+
+input:required+span:after {
+	color: red;
+	content: "*";
+}
+
+textarea:required+span:after {
+	color: red;
+	content: "*";
+}
+
+select {
+	width: 220px;
+	height: 25px;
+	font-size: 17px;
+}
+
+/*****************************
+*  Style for main container  *
+*****************************/
+#m-container {
+	width: 100%;
+	height: 100%;
+}
+
+#m-container td {
+	border: 1px;
+}
+/*****************************
+*  Style for content table  *
+*****************************/
+#content-table {
+	font-size: 30px;
+	width: 90%;
+	vertical-align: top;
+	margin: 50px;
+	text-align: center;
+}
+
+#content-table2 {
+	font-size: 25px;
+	width: 60%;
+	vertical-align: top;
+	margin: 50px;
+	text-align: center;
+}
+
+#content-table td {
+	border: 1px solid black;
+}
+
+#content-table th {
+	border: 1px solid black;
+}
+
+#content-table2 td {
+	border: 1px solid black;
+}
+
+#content-table2 caption {
+	font-size: 40;
+	font-weight: bold;
+}
+
+#content-table2 th {
+	border: 1px solid black;
+}
+
+/************************************
+*  Style for dispatcher form table  *
+************************************/
+#content-dispatcher-table {
+	font-size: 30px;
+	width: 70%;
+	vertical-align: top;
+	margin: 50px;
+}
+
+#content-dispatcher-table td {
+	border: 0px;
+}
+
+.dispatcher-set-form {
+	padding-right: 250px;
+	text-align: right;
+	vertical-align: top;
+}
+
+dispatcher-set-form option {
+	font-size: 30px;
+}
+
+.dispatcher-right-form {
+	vertical-align: top;
+}
+
+/*********************
+*  Style for header  *
+*********************/
+#header {
+	height: 40px;
+	background: #0080ff;
+	padding: 0px;
+}
+
+/**************************************************
+*  Style for left part top menu (Menu, Settings)  *
+**************************************************/
+#leftHeader {
+	color: #ffffff;
+	background: #0080ff;
+	float: left;
+	margin-left: 10px;
+	padding: 2px;
+}
+
+#leftHeader>a {
+	color: #ffffff;
+}
+
+/**************************************************
+* Style for right part top menu (Menu, Settings)  *
+**************************************************/
+#rightHeader {
+	background: #0080ff;
+	color: #ffffff;
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+	padding: 2px;
+}
+
+#rightHeader>a {
+	color: #00ffff;
+}
+
+/************************
+* Style for left menu   *
+************************/
+#leftMenu {
+	margin-left: 25px;
+	font-size: 25;
+	text-align: left;
+	vertical-align: top;
+	padding: 20px;
+	width: 15%
+}
+
+#leftMenu>div>a {
+	color: #0080ff;
+	marging: 2px;
+}
+
+/*************************
+* Style for right menu   *
+*************************/
+#rightMenu {
+	margin-right: 25px;
+	font-size: 25;
+	text-align: right;
+	vertical-align: top;
+	padding: 20px;
+	width: 15%
+}
+
+/***********************
+* Style for Login form *
+***********************/
+#login_form>fieldset {
+	display: inline;
+}
+
+#login_form>input[type=submit] {
+	margin-top: 5px;
+}
+
+/*************************
+* Style for Login footer *
+*************************/
+#footer {
+	text-align: center;
+	background: #0080ff;
+	height: 50px;
+}
+
+/*************************
+* Style for error page	 *
+*************************/
+
+#error_page {
+	width: 70%;
+	font-size: 30;
+	text-align: center;
+	vertical-align: top;
+	color: red;
+	padding: 20px;
+}
+
+/*****************************************
+* Style for settings page (settings.jsp) *
+*****************************************/
+
+#settings_form > div >p {
+	font-size: 17px;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+#settings_form > input[type=submit] {
+	margin-top: 10px;
+}
+
+/*******************************************************
+* Style for advanced search page (advanced_search.jsp) *
+*******************************************************/
+
+#advancedSearch {
+	text-align: right;
+	vertical-align: top;
+}
+
+#advancedSearch> div {
+	margin-right: 40%;
+	margin-top: 40px;
+}
+
+/***************
+* other styles *
+***************/
+.centerText {
+	text-align: center;
+	vertical-align: top;
+	padding: 20px;
+	font-size: 20;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.valignTop {
+	vertical-align: top;
+}
+
+.alignLeft {
+	text-align: left;
+}
+
+.makeOrderForm {
+	text-align: left;
+	padding-left: 50px;
+}
+
+.width50 {
+	width: 50%;
+}
+
+.marginRight100 {
+	margin-right: 100px;
+}

@@ -1,0 +1,50 @@
+<%--=========================================================================== 
+Header (top area). 
+===========================================================================--%>
+
+<%@ page import="ua.nure.ahtirskiy.finalProject.db.Role"%>
+<%@ include file="/WEB-INF/jspf/directive/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
+
+<tr>
+	<td id="header" colspan="3">
+<%--=========================================================================== 
+This is the common menu. 
+===========================================================================--%>
+		<div id="leftHeader">
+			<a href="settings.jsp"><fmt:message key="header_jsp.settings"/></a> &nbsp; 
+		</div> 
+		<c:if test="${not empty user}">
+<%--=========================================================================== 
+This way we define the menu located at the right of header. 
+===========================================================================--%>
+	<div id="rightHeader">
+
+<%--=========================================================================== 
+Type user name if the user object is presented in the current session.  
+===========================================================================--%>
+	<c:out value="${user.firstName} ${user.lastName}" />
+
+<%--=========================================================================== 
+Type user role name if the user object is presented in the current session.  
+===========================================================================--%>
+	<c:if test="${not empty userRole}">
+		<c:out value="(${userRole.name})" />
+	</c:if>
+
+<%--=========================================================================== 
+Type link to logout  
+===========================================================================--%>
+	<a href="controller?command=logout"> <fmt:message key="header_jsp.logout"/> </a>
+
+	</div>
+	</c:if> 
+	<c:if test="${empty user and title ne 'Login'}">
+		<div id="rightHeader">
+			<a href="login.jsp"><fmt:message key="header_jsp.login"/></a>
+		</div>
+ </c:if>
+
+	</td>
+</tr>

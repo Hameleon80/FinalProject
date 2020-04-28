@@ -1,0 +1,16 @@
+<!-- *****************
+* Right (search) menu *
+******************* -->
+
+<%@ include file="/WEB-INF/jspf/directive/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf"%>
+
+<td id="rightMenu">
+	<form name="sorter" action="controller" method="post"> 
+		<select name="command">
+			<option value="sortByNumber">Sort by number</option>
+			<option value="sortByName">Sort by name</option>
+		</select> <br><br>
+		<input type="submit" value="sort">
+	</form>
+</td>

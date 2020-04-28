@@ -1,0 +1,15 @@
+
+<Context reloadable="true" sendRedirectBody="true">
+	<Resource 
+		name="jdbc/AirlinesPool"
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		auth="Container" 
+		type="javax.sql.DataSource"
+		maxActive="100" maxIdle="30" maxWait="1000"
+		username="airlines_admin" password="adminpass"
+		driverClassName="com.mysql.cj.jdbc.Driver" 
+		defaultAutoCommit="false"
+		defaultTransactionIsolation="READ_COMMITED"
+		connectionProperties="userUnicode=yes;characterEncoding=utf8;useSSL=false;serverTimezone=UTC;autoReconnect=true;allowPublicKeyRetrieval=true;"
+		url="jdbc:mysql://localhost:3306/AirlinesDB"/>
+</Context>

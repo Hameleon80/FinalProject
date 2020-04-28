@@ -1,0 +1,36 @@
+<!-- ********
+* Left menu *
+********* -->
+
+<%@ page import="ua.nure.ahtirskiy.finalProject.db.Role"%>
+<%@ include file="/WEB-INF/jspf/directive/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+<td id="leftMenu">
+	<div>
+			<a href="index.jsp"><fmt:message key="left_menu_jsp.home"/></a><br>
+			<hr>
+			<a href="controller?command=listFlights"><fmt:message key="left_menu_jsp.all_flights"/></a><br>
+			<hr>
+			<a href="search_by_number.jsp"><fmt:message key="left_menu_jsp.search_by_number"/></a><br>
+			<hr>
+			<a href="advanced_search.jsp"><fmt:message key="left_menu_jsp.advanced_search"/></a><br>
+			<hr>
+			
+	<c:choose>
+		<c:when test="${userRole.name=='admin'}">
+			<a href="controller?command=listEmployee"><fmt:message key="left_menu_jsp.edit_employee"/></a><br>
+			<hr>
+			<a href="controller?command=listOrders"><fmt:message key="left_menu_jsp.dispatcher_orders"/></a><br>
+			<hr>
+		</c:when>
+		<c:when test="${userRole.name == 'dispatcher'}">
+			<a href="dispatcherIndex.jsp"><fmt:message key="left_menu_jsp.set_crew"/></a><br>
+			<hr>
+			<a href="controller?command=dispatcherShowOrdersList"><fmt:message key="left_menu_jsp.make_order"/></a><br>
+			<hr>
+		</c:when>
+	</c:choose>
+	</div>
+</td>
